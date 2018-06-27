@@ -1,5 +1,6 @@
 import telebot
 from random import randrange
+import config
 
 keywords = ['Name','Sign','Nature','Internet', 'Typing', 'Wireless', 'Telephone', 'Network', 'Screen', 'Person',
             'Iphone', 'Android', 'Laptop', 'App', 'Monitor', 'Computer', 'Apple', 'Phone', 'Code', 'Text', 'Animal',
@@ -8,7 +9,7 @@ keywords = ['Name','Sign','Nature','Internet', 'Typing', 'Wireless', 'Telephone'
             'Question', 'Quotes', 'Coffee', 'Coffee shop', 'Green', 'Blue', 'Red', 'Purple', 'Pink', 'Lake', 'Tree']
 
 
-bot = telebot.TeleBot("609678962:AAEbF_QLuGJy2RCkQZ6J_hnzqPIXC_zdm5c")
+bot = telebot.TeleBot(config.api['key'])
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
